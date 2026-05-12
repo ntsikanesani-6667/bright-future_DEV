@@ -1,0 +1,166 @@
+body{
+    background: url(../img/bg.jpg) center/cover no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+.links{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 22px;
+    margin: 0 auto;
+    align-items: center;
+    margin-left: 15cm;
+}
+h2{
+    color: white;
+    text-align: center;
+}
+button{
+    font-size: larger;
+    border-radius: 10px;
+    border-width: 5;
+    border-style: double;
+    border-color: blue;
+}
+button:hover{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    border-color: white;
+}
+span{
+    font-size: x-large;
+    color: blue;
+    justify-content: center;
+    text-align: center;
+}
+.formbox:hover{
+    border-style: double;
+    background-color: aqua;
+}
+.formbox{
+    margin-left: 15cm;
+    align-items: center;
+    padding: 5px;
+    background-color: white;
+    border-width: 5;
+    border-radius: 15px;
+    border-color: blue;
+    border-style: dotted;
+    margin: 10px 10px auto;
+}
+.status{
+    padding: 15px;
+    border-radius: 15px;
+    border-color: blue;
+    border-width: 5;
+    border-style: groove;
+    background-color: black;
+    z-index: 1;
+}
+.LoginForm{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 70px;
+}
+.LoginUser, .LoginPassword{
+    padding: 20px;
+    border-radius: 5px;
+    border-color: blue;
+    border-width: 5;
+    border-style: double;
+    font-size: larger
+}
+.OverLay{
+    display: none;
+}
+.form-box:hover{
+    border-style: double;
+    background-color: aqua;
+}
+.form-box{
+    margin-left: 15cm;
+    align-items: center;
+    padding: 5px;
+    background-color: white;
+    border-width: 5;
+    border-radius: 15px;
+    border-color: blue;
+    border-style: dotted;
+    margin: 10px 10px auto;
+}
+.Status{
+    padding: 15px;
+    border-radius: 15px;
+    border-color: blue;
+    border-width: 5;
+    border-style: groove;
+    background-color: black;
+    z-index: 1;
+}
+.SignupForm{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 70px;
+}
+.SignupUser, .SignupPassword{
+    padding: 20px;
+    border-radius: 5px;
+    border-color: blue;
+    border-width: 5;
+    border-style: double;
+    font-size: larger
+}
+.Over-Lay{
+    display: none;
+}
+.Stage{
+	display: none;
+}
+.scene {
+  width: 200px;
+  height: 200px;
+  perspective: 600px; /* Adjust depth intensity */
+  margin-left: 15cm;
+  margin-top: 3cm;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateCube 5s infinite linear; /* Optional rotation */
+}
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  opacity: 0.9; /* Makes it look see-through */
+  border-radius: 5px;
+  border-width: 3px;
+  border-color: blue;
+  border-style: groove;
+}
+
+/* Position each face 100px from the center */
+.front  { transform: rotateY(0deg) translateZ(100px); background: aqua; color: blue; }
+.back   { transform: rotateY(180deg) translateZ(100px); background: aqua; color: blue; }
+.right  { transform: rotateY(90deg) translateZ(100px); background: aqua; color: blue; }
+.left   { transform: rotateY(-90deg) translateZ(100px); background: aqua; color: blue; }
+.top    { transform: rotateX(90deg) translateZ(100px); background: aqua; color: blue; }
+.bottom { transform: rotateX(-90deg) translateZ(100px); background: aqua; color: blue; }
+
+/* Optional: Make it spin */
+@keyframes rotateCube {
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to { transform: rotateX(360deg) rotateY(360deg); }
+}

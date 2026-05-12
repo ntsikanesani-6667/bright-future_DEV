@@ -1,0 +1,277 @@
+body{
+    background: url(../img/bg.jpg) center/cover no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+.Container{
+	display: none;
+}
+h2{
+    color: white;
+	text-align: center;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 22px;
+    margin: 0 auto;
+    align-items: center;
+}
+.email{
+    color: black;
+    font-size: larger;
+    text-align: center;
+}
+.email:hover{
+    color: white;
+    text-transform: capitalize;
+}
+.call{
+    color: black;
+    font-size: larger;
+    padding-top: 10px;
+    text-align: center;
+}
+.call:hover{
+    color: white;
+    text-transform: capitalize;
+}
+.profile-btn{
+    font-size: larger;
+    border-radius: 10px;
+    border-width: 5;
+    border-color: blue;
+    background-color: white;
+    cursor: pointer;
+}
+.profile-btn:hover{
+    border-color: white;
+    background-color: blue;
+    color: white;
+}
+.LOGOUT{
+    background-color: white;
+    color: red;
+    border-radius: 10px;
+    border-color: red;
+    border-width: 5;
+    border-style: groove;
+    float: right;
+    padding: 10px;
+    cursor: pointer;
+}
+.LOGOUT:hover{
+    background-color: red;
+    color: white;
+    border-color: white;
+}
+.close-profile{
+    font-size: larger;
+    border-radius: 10px;
+    border-width: 5;
+    border-color: blue;
+    background-color: white;
+    cursor: pointer;
+}
+.close-profile:hover{
+    border-color: white;
+    background-color: blue;
+    color: white;
+}
+.profile-box{
+    float: right;
+    margin: 10px 10px auto;
+    padding: 5px;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    border-color: blue;
+    border-style: dotted;
+    border-width: 5;
+    height: 10cm;
+    width: 10cm;
+}
+.profile-box:hover{
+    background-color: aqua;
+    border-style: double;
+}
+.profile-over-lay{
+    display: none;
+}
+.about-over-lay{
+    display: none;
+}
+.contact-over-lay{
+    display: none;
+}
+.help-over-lay{
+    display: none;
+}
+.about{
+    color: aqua;
+}
+.about:hover{
+    font-size: larger;
+    border-width: 5;
+    border-radius: 10px;
+    border-style: groove;
+    border-color: white;
+}
+.contact{
+    color: aqua;
+}
+.contact:hover{
+    font-size: larger;
+    border-width: 5;
+    border-radius: 10px;
+    border-style: groove;
+    border-color: white;
+}
+.help{
+    color: aqua;
+}
+.help:hover{
+    font-size: larger;
+    border-width: 5;
+    border-radius: 10px;
+    border-style: groove;
+    border-color: white;
+}
+.about-box{
+    padding: 5px;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    border-color: blue;
+    border-style: dotted;
+    border-width: 5;
+    height: 10cm;
+    width: 10cm;
+    margin-left: 19px;
+}
+.about-box:hover{
+    background-color: aqua;
+    border-style: double;
+}
+.contact-box{
+    padding: 5px;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    border-color: blue;
+    border-style: dotted;
+    border-width: 5;
+    height: 10cm;
+    width: 10cm;
+    margin-left: 11cm;
+}
+.contact-box:hover{
+    background-color: aqua;
+    border-style: double;
+}
+.help-box{
+    padding: 5px;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    border-color: blue;
+    border-style: dotted;
+    border-width: 5;
+    height: 10cm;
+    width: 10cm;
+    margin-left: 21.9cm;
+}
+.help-box:hover{
+    background-color: aqua;
+    border-style: double;
+}
+.close-about{
+    font-size: larger;
+    border-radius: 10px;
+    border-width: 5;
+    border-color: blue;
+    background-color: white;
+    cursor: pointer;
+}
+.close-about:hover{
+    border-color: white;
+    background-color: blue;
+    color: white;
+}
+.close-contact{
+    font-size: larger;
+    border-radius: 10px;
+    border-width: 5;
+    border-color: blue;
+    background-color: white;
+    cursor: pointer;
+}
+.close-contact:hover{
+    border-color: white;
+    background-color: blue;
+    color: white;
+}
+.close-help{
+    font-size: larger;
+    border-radius: 10px;
+    border-width: 5;
+    border-color: blue;
+    background-color: white;
+    cursor: pointer;
+}
+.close-help:hover{
+    border-color: white;
+    background-color: blue;
+    color: white;
+}
+.Stage{
+	display: none;
+}
+.scene {
+  width: 200px;
+  height: 200px;
+  perspective: 600px; /* Adjust depth intensity */
+  margin-left: 15cm;
+  margin-top: 3cm;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateCube 5s infinite linear; /* Optional rotation */
+}
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  opacity: 0.9; /* Makes it look see-through */
+  border-radius: 5px;
+  border-width: 3px;
+  border-color: blue;
+  border-style: groove;
+}
+
+/* Position each face 100px from the center */
+.front  { transform: rotateY(0deg) translateZ(100px); background: aqua; color: blue; box-shadow: white}
+.back   { transform: rotateY(180deg) translateZ(100px); background: aqua; color: blue; }
+.right  { transform: rotateY(90deg) translateZ(100px); background: aqua; color: blue; }
+.left   { transform: rotateY(-90deg) translateZ(100px); background: aqua; color: blue; }
+.top    { transform: rotateX(90deg) translateZ(100px); background: aqua; color: blue; }
+.bottom { transform: rotateX(-90deg) translateZ(100px); background: aqua; color: blue; }
+
+/* Optional: Make it spin */
+@keyframes rotateCube {
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to { transform: rotateX(360deg) rotateY(360deg); }
+}
+#cube:hover{
+	cursor: pointer;
+}
