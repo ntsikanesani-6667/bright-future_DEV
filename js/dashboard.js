@@ -14,6 +14,8 @@ const Chelp = document.getElementById('close-help');
 const STAGE = document.getElementById('stage');
 const CONTAINER = document.getElementById('container');
 const Explore = document.getElementById('explore');
+const env = document.getElementById('environment');
+const ENVBTN = document.getElementById('env-btn');
 
 //Popup cube when window starts
 STAGE.classList.remove('Stage');
@@ -21,10 +23,17 @@ STAGE.classList.remove('Stage');
 //Popup container when window starts
 CONTAINER.classList.remove('Container');
 
-//Close container when cube is clicked
+//Close container when cube is clicked and popup environment
 Explore.addEventListener('click', () => 
 	{
-		CONTAINER.classList.add('Container')
+		CONTAINER.classList.add('Container'),
+		env.classList.remove('Environment')
+	});
+//Close environment and popup container when back button is clicked
+ENVBTN.addEventListener('click', () => 
+	{
+		env.classList.add('Environment'),
+		CONTAINER.classList.remove('Container')
 	});
 
 //Collect logout feature
