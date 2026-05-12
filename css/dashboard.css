@@ -6,6 +6,45 @@ body{
 .Container{
 	display: none;
 }
+.Environment{
+	display: none;
+}
+.env-btn{
+	font-size: larger;
+    border-radius: 10px;
+    border-width: 5;
+    border-color: blue;
+    background-color: white;
+    cursor: pointer;
+}
+.env-btn:hover{
+	border-color: white;
+    background-color: blue;
+    color: white;
+}
+.Area{
+	border-width: 5;
+	border-radius: 10px;
+	border-style: groove;
+	border-color: blue;
+	background-color: aqua;
+	width: 1330px;
+	height: 500px;
+	opacity: 0.5;
+}
+li{
+	color: white;
+}
+li:hover{
+	font-size: larger;
+	color:aqua;
+	cursor: pointer;
+	border-color: white;
+	border-radius: 10px;
+	border-style: groove;
+	border-width: 5;
+	background-color: black;
+}
 h2{
     color: white;
 	text-align: center;
