@@ -16,6 +16,19 @@ const CONTAINER = document.getElementById('container');
 const Explore = document.getElementById('explore');
 const env = document.getElementById('environment');
 const ENVBTN = document.getElementById('env-btn');
+const PHOTOS = document.getElementById('photos');
+const VIDEOS = document.getElementById('videos');
+const MUSIC = document.getElementById('music');
+const BOOKS = document.getElementById('books');
+const Ppanel = document.getElementById('photos-panel');
+const Vpanel = document.getElementById('videos-panel');
+const Mpanel = document.getElementById('music-panel');
+const Bpanel = document.getElementById('books-panel');
+const Spanel = document.getElementById('slide-panel');
+const done = document.getElementById('done');
+const dOne = document.getElementById('dOne');
+const doNe = document.getElementById('doNe');
+const donE = document.getElementById('donE');
 
 //Popup cube when window starts
 STAGE.classList.remove('Stage');
@@ -23,12 +36,82 @@ STAGE.classList.remove('Stage');
 //Popup container when window starts
 CONTAINER.classList.remove('Container');
 
+//Popup slidepanel when window starts
+Spanel.classList.remove('Slide-panel');
+
+//Popup photos and close slidepanel and others
+PHOTOS.addEventListener('click', () => 
+	{
+		Spanel.classList.add('Slide-panel'),
+		Vpanel.classList.add('Videos-panel'),
+		Mpanel.classList.add('Music-panel'),
+		Bpanel.classList.add('Books-panel'),
+		Ppanel.classList.remove('Photos-panel')
+	});
+
+//Popup videos and close slidepanel
+VIDEOS.addEventListener('click', () => 
+	{
+		Spanel.classList.add('Slide-panel'),
+		Ppanel.classList.add('Photos-panel'),
+		Mpanel.classList.add('Music-panel'),
+		Bpanel.classList.add('Books-panel'),
+		Vpanel.classList.remove('Videos-panel')
+	});
+//Popup music and close slidepanel
+MUSIC.addEventListener('click', () => 
+	{
+		Spanel.classList.add('Slide-panel'),
+		Ppanel.classList.add('Photos-panel'),
+		Vpanel.classList.add('Videos-panel'),
+		Bpanel.classList.add('Books-panel'),
+		Mpanel.classList.remove('Music-panel')
+	});
+
+//Popup books and close slidepanel
+BOOKS.addEventListener('click', () => 
+	{
+		Spanel.classList.add('Slide-panel'),
+		Ppanel.classList.add('Photos-panel'),
+		Vpanel.classList.add('Videos-panel'),
+		Mpanel.classList.add('Music-panel'),
+		Bpanel.classList.remove('Books-panel')
+	});
+
+//Close photos and popup slidepanel
+done.addEventListener('click', () => 
+	{
+		Ppanel.classList.add('Photos-panel'),
+		Spanel.classList.remove('Slide-panel')
+	});	
+//Close videos and popup slidepanel
+dOne.addEventListener('click', () => 
+	{
+		Vpanel.classList.add('Videos-panel'),
+		Spanel.classList.remove('Slide-panel')
+	});
+
+//Close music and popup slidepanel
+doNe.addEventListener('click', () =>
+	{
+		Mpanel.classList.add('Music-panel'),
+		Spanel.classList.remove('Slide-panel')
+	});
+
+//Close books and popup slidepanel
+donE.addEventListener('click', () => 
+	{
+		Bpanel.classList.add('Books-panel'),
+		Spanel.classList.remove('Slide-panel')
+	});
+
 //Close container when cube is clicked and popup environment
 Explore.addEventListener('click', () => 
 	{
 		CONTAINER.classList.add('Container'),
 		env.classList.remove('Environment')
 	});
+
 //Close environment and popup container when back button is clicked
 ENVBTN.addEventListener('click', () => 
 	{
