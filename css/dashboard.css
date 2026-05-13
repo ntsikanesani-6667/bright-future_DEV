@@ -30,7 +30,7 @@ body{
 	background-color: aqua;
 	width: 1330px;
 	height: 500px;
-	opacity: 0.5;
+	opacity: 0.9;
 }
 li{
 	color: white;
@@ -313,4 +313,50 @@ ul{
 }
 #cube:hover{
 	cursor: pointer;
+}
+.Slidepanel{
+	width: 100%;
+	max-width: 800px;
+	overflow: hidden;
+	margin: auto;
+	margin-top: 27px;
+	border-radius: 15px;
+}
+.Album{
+	display: flex;
+	width: 300%; /* Total width = 100% * number of slides */
+	animation: slide-animation 12s infinite;
+}
+.slide{
+	width: 33.33%;
+}
+.slide img{
+	width: 100%;
+	display: block;
+}
+
+@keyframes slide-animation{
+	0%   { margin-left: 0%; }    /* Image 1 */
+	20%  { margin-left: 0%; }
+	33%  { margin-left: -100%; } /* Transition to Image 2 */
+	53%  { margin-left: -100%; }
+	66%  { margin-left: -200%; } /* Transition to Image 3 */
+	86%  { margin-left: -200%; }
+	100% { margin-left: 0%; }
+}
+.Photos-panel, .Videos-panel, .Music-panel, .Books-panel, .Slide-panel{
+	display: none;
+}
+.done{
+	font-size: larger;
+    border-radius: 10px;
+    border-width: 5;
+    border-color: blue;
+    background-color: white;
+    cursor: pointer;
+}
+.done:hover{
+	border-color: white;
+    background-color: blue;
+    color: white;
 }
