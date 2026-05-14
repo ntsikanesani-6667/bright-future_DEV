@@ -116,6 +116,11 @@ Explore.addEventListener('click', () =>
 ENVBTN.addEventListener('click', () => 
 	{
 		env.classList.add('Environment'),
+		Bpanel.classList.add('Books-panel'),
+		Mpanel.classList.add('Music-panel'),
+		Vpanel.classList.add('Videos-panel'),
+		Ppanel.classList.add('Photos-panel'),
+		Spanel.classList.remove('Slide-panel'),
 		CONTAINER.classList.remove('Container')
 	});
 
